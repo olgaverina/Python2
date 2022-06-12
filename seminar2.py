@@ -7,15 +7,16 @@ os.system('cls||clear')
 import random
 from random import randint
 
-# list = [randint(-10,10) for i in range(20)]
-# # print(list)
+c
+print(list)
 
-# for i in list:
-#     temp = list[i]
-#     temp_i = i
-#     temp_rand = randint(range(20))
-#     list.insert(i, )
-# # random.shuffle(list)
+for i in list:
+    temp = list[i]
+    temp_i = i
+    temp_rand = randint(range(20))
+    list.insert(i, )
+
+# random.shuffle(list)
 # print(list)
 
 
@@ -42,18 +43,18 @@ from random import randint
 #4. Задайте список. Напишите программу, которая определит, 
 # присутствует ли в заданном списке строк некое число
 
-num = int(input("Enter the number >> "))
-array = ['geek', 'brains4', '5five', '3friends', '1234']
+# num = int(input("Enter the number >> "))
+# array = ['geek', 'brains4', '5five', '3friends', '1234']
  
-for i in array:
-    for j in i:
-        if (j.isdigit() and int(j) == num):
-            print(f'{i} - true')
-            break
-        else:
-            print(f'{i} - false')
-            break
-        continue
+# for i in array:
+#     for j in i:
+#         if (j.isdigit() and int(j) == num):
+#             print(f'{i} - true')
+#             break
+#         else:
+#             print(f'{i} - false')
+#             break
+#         continue
 
         
 
