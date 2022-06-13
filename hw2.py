@@ -9,81 +9,82 @@ from random import randint
 import os
 os.system('cls||clear')
 
-# 1. Найти сумму чисел списка стоящих на нечетной позиции
+print("1. Найти сумму чисел списка стоящих на нечетной позиции")
 # Пример:[1,2,3,4] -> 4
 
-# arr = [1,2,3,4,5, 6] 
-# sum_odd_elem = 0
-# for element in arr:
-#     if (element % 2 != 0):
-#         sum_odd_elem += element
+arr_list = [1,2,3,4,5, 6] 
+sum_odd_elem = 0
+for element in arr_list:
+    if (element % 2 != 0):
+        sum_odd_elem += element
 
-# print(sum_odd_elem)
+print(f"\nСумма нечетных чисел - {sum_odd_elem}\n")
 
 # !!! я не поняла задание, 
 # так как в нем было написано найти сумму чисел списка на нечетной позиции, 
 # но в примере была сумма просто нечетных чисел
 # поэтому я решила и так и так:
 
-# sum_odd_index = 0
-# for element in arr:
-#     if (arr.index(element) % 2 != 0):
-#         sum_odd_index += element
+sum_odd_index = 0
+for element in arr_list:
+    if (arr_list.index(element) % 2 != 0):
+        sum_odd_index += element
 
-# print(sum_odd_index)
+print(f"Сумма чисел на нечетных индексах - {sum_odd_index}\n")
 
 
-# 2. Найти произведение пар чисел в списке. Парой считаем первый и последний элемент, 
-# второй и предпоследний и т.д. 
+print("2. Найти произведение пар чисел в списке. \
+\nПарой считаем первый и последний элемент, второй и предпоследний и т.д.\n") 
 # Пример: [2, 3, 4, 5, 6] => [12, 15, 16]; [2, 3, 5, 6] => [12, 15] 
 
-# arr = [2, 3, 4, 5, 6] #[2, 3, 5, 6]
-# new_arr = []
-# length = len(arr)
-# for elem in arr:
-#     if(length > len(arr)/2):
-#         new_arr.append(elem * arr[length - 1])
-#         length -= 1
+ar = [2, 3, 4, 5, 6] #[2, 3, 5, 6]
+new_ar = []
+length = len(ar)
+for elem in ar:
+    if(length > len(ar)/2):
+        new_ar.append(elem * ar[length - 1])
+        length -= 1
+print(f"Список - {ar}")
+print(f"\nПроизведение пар чисел этого списка - {new_ar}\n")
 
-# print(new_arr)
 
-
-# 3. В заданном списке вещественных чисел найдите разницу 
-# между максимальным и минимальным значением дробной части элементов. 
+print("3. В заданном списке вещественных чисел найдите разницу \
+\nмежду максимальным и минимальным значением дробной части элементов.")
 # Пример: [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-# array = [1.1, 1.2, 3.1, 5, 10.01]
-# new_arr = []
+list = [1.1, 1.2, 3.1, 5, 10.01]
+new_arr = []
 
-# for element in array:
-#     new_arr.append((element - round(element)))
+for element in list:
+    new_arr.append((element - round(element)))
 
-# print(new_arr)
+print(f"\nМассив с дробными частями чисел - {new_arr}\n")
 
-# max = new_arr[0]
-# min = new_arr[0]
-# for elem in new_arr:
-#     if(round(elem, 2)) > max:
-#         max = round(elem, 4)
-#     if(round(elem, 2)) < min:
-#         min = round(elem, 4)
+max = new_arr[0]
+min = new_arr[0]
+for elem in new_arr:
+    if(round(elem, 2)) > max:
+        max = round(elem, 4)
+    if(round(elem, 2)) < min:
+        min = round(elem, 4)
 
-# print(max - min)   #!!! у меня получилось в ответе 0,2 а не 0,19 так как самое маленько дробное число это ноль - от пятерки.
+print(f"Разница между максимальным и минимальным значением дробной части - {max - min}\n")   #!!! у меня получилось в ответе 0,2 а не 0,19 так как самое маленько дробное число это ноль - от пятерки.
 
 
-# Экстра-задачи:
-# 1. Написать программу преобразования двоичного числа в десятичное.
+print("Экстра-задачи:\n")
 
-# array = [randint(0,1) for i in range(6)]
-# print(f"Число в двоичной системе  -  {array}")
-# len = len(array) - 1
-# sum = 0
+print("1. Написать программу преобразования двоичного числа в десятичное.\n")
 
-# for elem in array:
-#     sum += (2**len)*elem
-#     len -= 1
+d_array = [randint(0,1) for i in range(6)]
+print(f"Число в двоичной системе  -  {d_array}\n")
+n_len = len(d_array) - 1
+sum = 0
 
-# print(f"Число в десятичной системе - {sum}")
+for elem in d_array:
+    sum += (2**n_len)*elem
+    n_len -= 1
+
+print(f"Число в десятичной системе - {sum}\n")
 
 # 2. Создайте программу, которая будет играть в игру “коровы и быки” с пользователем. 
 # Игра работает так: Случайным образом генерируйте 4-значное число. 
@@ -102,9 +103,27 @@ os.system('cls||clear')
 # Найдите сумму всех четных элементов ряда Фибоначчи, 
 # которые не превышают четыре миллиона.
 
+print(f"3. Найдите сумму всех четных элементов ряда Фибоначчи, \
+которые не превышают четыре миллиона.")
+print()
+fib_arr = []
+sum_even = 0
+fib_arr.append(1)
+fib_arr.append(2)
+
+for i in range(1, 31):
+    length = len(fib_arr)
+    fib_arr.append(fib_arr[length - 2] + fib_arr[length - 1])
+print(f"ряд Фибоначчи - {fib_arr}")
+
+for i in range(0, len(fib_arr), 2):
+    sum_even += fib_arr[i]
+
+print(f"\nСумма - {sum_even}")
+
 # 4. Простые делители числа 13195 - это 5, 7, 13 и 29.
 # Каков самый большой делитель числа 600851475143, являющийся простым числом?
 
-# 5.2520 - самое маленькое число, которое делится без остатка на все числа от 1 до 10.
+# 5. 2520 - самое маленькое число, которое делится без остатка на все числа от 1 до 10.
 # Какое самое маленькое число делится нацело на все числа от 1 до 20?
 # 2
