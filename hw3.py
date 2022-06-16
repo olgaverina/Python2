@@ -1,8 +1,20 @@
-# 1. Найти НОК двух чисел
-
 import random 
 import os
 os.system('cls||clear')
+
+print("1. Найти НОК двух чисел")
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+max = a if a >= b else b #найти максимальное число
+nod = 0                  #НОД
+for i in range(1, max):
+    if ((a % i == 0) and (b % i == 0) ):
+        nod = i
+print(nod)
+nok = int(a * b / nod)
+print(nok)
 
 # 2. Вычислить число Пи c заданной точностью d
 # Пример: при d = 0.001,  c= 3.141. 
