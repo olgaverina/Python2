@@ -3,9 +3,6 @@
 # Позиции хранятся в файле file.txt в одной строке одно число
 # сделать запись в файл
 
-# 8. Задать список из N элементов, заполненных числами из [-N, N]. 
-# Найти произведение элементов на указанных позициях. 
-# Позиции хранятся в файле file.txt в одной строке одно число
 
 # import random 
 # import os
@@ -62,20 +59,28 @@
 # Дано число. Составить список чисел Фибоначчи, в том числе для отрицательных индексов.
 # Т е для k = 8, список будет выглядеть так: [-21 ,13, -8, 5, −3,  2, −1,  1, 0, 1, 1, 2, 3, 5, 8, 13, 21] Негафибоначчи
 
-n = 8
+n = int(input("Enter the number: "))
+
 if n < 0:
     print("Wrong number")
-def fib(n):
-    a = 0
-    b = 1
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        return print((fib(n - 1)) + (fib(n - 2)))
+fib = [0, 1]
+for i in range(2, n):
+    fib.append(fib[i-1] + fib[i-2])
 
-fib(n)
+print(fib)
+
+neg_fib = []
+
+for i in range(1, n*2):
+    if(i < n):
+        if(i%2==0):
+            neg_fib.append(fib[n-i]*-1)
+        else:
+            neg_fib.append(fib[n-i])
+    else:
+        neg_fib.append(fib[i-n])
+
+print(neg_fib)
 
 
 
