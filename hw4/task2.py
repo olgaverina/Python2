@@ -4,3 +4,14 @@
 # Пример: [1, 5, 2, 3, 4, 6, 1, 7] => [1, 2, 3, 4, 6, 7]
 #  [5, 2, 3, 4, 6, 1, 7] => [2, 3, 4, 6, 7]
 #  Порядок элементов менять нельзя
+
+array = [1, 5, 2, 3, 4, 6, 1, 7]
+sorted_arr = []
+
+for i in array:
+    for j in array:
+        if i < 
+        sorted_arr.append(a)
+    print()
+
+print(sorted_arr)
