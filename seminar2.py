@@ -7,7 +7,6 @@ os.system('cls||clear')
 import random
 from random import randint
 
-c
 print(list)
 
 for i in list:
